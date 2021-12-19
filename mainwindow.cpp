@@ -16,6 +16,7 @@ MainWindow::MainWindow(QWidget *parent) :
     trem4 = new Trem(4,240,140);
     trem5 = new Trem(5,460,140);
 
+
     /*
      * Conecta o sinal UPDATEGUI à função UPDATEINTERFACE.
      * Ou seja, sempre que o sinal UPDATEGUI foi chamado, será executada a função UPDATEINTERFACE.
@@ -31,13 +32,22 @@ MainWindow::MainWindow(QWidget *parent) :
 
     trem1->start();
     trem2->start();
-    //trem3->start();
+    trem3->start();
     trem4->start();
-    //trem5->start();
+    trem5->start();
 }
 
 //Função que será executada quando o sinal UPDATEGUI for emitido
 void MainWindow::updateInterface(int id, int x, int y){
+    ui->label_4->setText(QString::number(trem1->iarea1));
+    ui->label_5->setText(QString::number(trem1->iarea2));
+    ui->label_6->setText(QString::number(trem1->iconjunto1));
+
+    ui->label_8->setText(QString::number(trem1->area_atual));
+    ui->label_9->setText(QString::number(trem2->area_atual));
+    ui->label_10->setText(QString::number(trem3->area_atual));
+    ui->label_11->setText(QString::number(trem4->area_atual));
+    ui->label_12->setText(QString::number(trem5->area_atual));
     switch(id){
     case 1: //Atualiza a posição do objeto da tela (quadrado) que representa o trem1
         ui->label_trem1->setGeometry(x,y,21,17);
@@ -91,24 +101,45 @@ void MainWindow::on_pushButton_2_clicked()
 void MainWindow::on_vel1_valueChanged(int value)
 {
     trem1->setVelocidade(value);
+    if(value<200)
+        ui->label_trem1->setStyleSheet("QLabel { background: red}");
+    else
+        ui->label_trem1->setStyleSheet("QLabel { background: grey}");
 }
 
 void MainWindow::on_vel2_valueChanged(int value)
 {
     trem2->setVelocidade(value);
+    if(value<200)
+        ui->label_trem2->setStyleSheet("QLabel { background: green}");
+    else
+        ui->label_trem2->setStyleSheet("QLabel { background: grey}");
 }
 
 void MainWindow::on_vel3_valueChanged(int value)
 {
     trem3->setVelocidade(value);
+    if(value<200)
+        ui->label_trem3->setStyleSheet("QLabel { background: purple}");
+    else
+        ui->label_trem3->setStyleSheet("QLabel { background: grey}");
 }
 
 void MainWindow::on_vel4_valueChanged(int value)
 {
     trem4->setVelocidade(value);
+    if(value<200)
+        ui->label_trem4->setStyleSheet("QLabel { background: blue}");
+    else
+        ui->label_trem4->setStyleSheet("QLabel { background: grey}");
 }
 
 void MainWindow::on_vel5_valueChanged(int value)
 {
     trem5->setVelocidade(value);
+
+    if(value<200)
+        ui->label_trem5->setStyleSheet("QLabel { background: orange}");
+    else
+        ui->label_trem5->setStyleSheet("QLabel { background: grey}");
 }

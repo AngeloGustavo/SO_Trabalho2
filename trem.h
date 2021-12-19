@@ -19,6 +19,8 @@ public:
     Trem(int ID, int x, int y);  //construtor
     void run();         //função a ser executada pela thread
     void setVelocidade(int velocidade);
+    int iarea1,iarea2,iconjunto1;
+    int area_atual;
 
 //Cria um sinal
 signals:
@@ -34,7 +36,9 @@ private:
    //+std::vector <int> &estados;
    bool test1;
    bool test2;
+   bool test3;
    bool parado;
+   bool liberado;
 
 };
 

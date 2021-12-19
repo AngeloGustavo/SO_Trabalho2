@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>724</width>
+    <width>726</width>
     <height>444</height>
    </rect>
   </property>
@@ -28,25 +28,6 @@
     </property>
     <property name="text">
      <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_RC_2">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>140</y>
-      <width>16</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLabel { background: grey}</string>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::WinPanel</enum>
-    </property>
-    <property name="text">
-     <string>2</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_trilho1_2">
@@ -75,7 +56,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QLabel { background: red}</string>
+     <string notr="true">QLabel { background: grey
+}</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
@@ -317,25 +299,6 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_RC_3">
-    <property name="geometry">
-     <rect>
-      <x>400</x>
-      <y>140</y>
-      <width>16</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLabel { background: grey}</string>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::WinPanel</enum>
-    </property>
-    <property name="text">
-     <string>3</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_trilho3_2">
     <property name="geometry">
      <rect>
@@ -391,7 +354,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QLabel { background: grey}</string>
+     <string notr="true">QLabel { background: grey
+}</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
@@ -442,25 +406,6 @@
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_RC_0">
-    <property name="geometry">
-     <rect>
-      <x>354</x>
-      <y>80</y>
-      <width>16</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLabel { background: grey}</string>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::WinPanel</enum>
-    </property>
-    <property name="text">
-     <string>0</string>
     </property>
    </widget>
    <widget class="QSlider" name="vel2">
@@ -587,7 +532,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QLabel { background: green}</string>
+     <string notr="true">QLabel { background: grey
+}</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
@@ -628,7 +574,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QLabel { background: blue}</string>
+     <string notr="true">QLabel { background: grey
+}</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
@@ -640,47 +587,450 @@
      <string>T4</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_RC_4">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>142</y>
+      <width>8</width>
+      <height>10</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { background: grey}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_RC_5">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>142</y>
+      <width>8</width>
+      <height>10</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { background: grey}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_RC_6">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>142</y>
+      <width>8</width>
+      <height>10</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { background: grey}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string>3</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_RC_7">
+    <property name="geometry">
+     <rect>
+      <x>469</x>
+      <y>200</y>
+      <width>8</width>
+      <height>10</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { background: grey}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string>6</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_RC_8">
+    <property name="geometry">
+     <rect>
+      <x>249</x>
+      <y>200</y>
+      <width>8</width>
+      <height>10</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { background: grey}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string>5</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_RC_9">
+    <property name="geometry">
+     <rect>
+      <x>359</x>
+      <y>80</y>
+      <width>8</width>
+      <height>10</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { background: grey}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_RC_10">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>142</y>
+      <width>8</width>
+      <height>10</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { background: grey}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string>4</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>280</y>
+      <width>58</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>area1</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>280</y>
+      <width>58</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>area2</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>280</y>
+      <width>58</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>conjunto1</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>300</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>300</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>300</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>330</y>
+      <width>171</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>t1      t2      t3     t4      t5  </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>350</y>
+      <width>21</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>999</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>350</y>
+      <width>21</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>999</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>350</y>
+      <width>21</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>999</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>350</y>
+      <width>21</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>999</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>350</y>
+      <width>21</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>999</string>
+    </property>
+   </widget>
+   <zorder>label_trilho3</zorder>
+   <zorder>label_trilho4_6</zorder>
+   <zorder>label_trilho3_2</zorder>
+   <zorder>label_trilho1_13</zorder>
+   <zorder>label_trilho1_4</zorder>
    <zorder>label_trilho4_3</zorder>
+   <zorder>label_trilho3_5</zorder>
+   <zorder>label_trilho1_5</zorder>
+   <zorder>label_trilho1_11</zorder>
+   <zorder>label_trilho1_3</zorder>
+   <zorder>label_RC_6</zorder>
+   <zorder>label_RC_10</zorder>
+   <zorder>label_RC_7</zorder>
+   <zorder>label_RC_8</zorder>
+   <zorder>label_RC_5</zorder>
+   <zorder>label_RC_4</zorder>
+   <zorder>label_RC_9</zorder>
    <zorder>label_trilho1_2</zorder>
    <zorder>label_trilho4</zorder>
-   <zorder>label_trilho1_13</zorder>
    <zorder>pushButton_2</zorder>
    <zorder>label_trilho1_14</zorder>
    <zorder>label_trilho4_2</zorder>
-   <zorder>label_trilho1_11</zorder>
    <zorder>label_trilho4_5</zorder>
    <zorder>vel1</zorder>
-   <zorder>label_trilho3</zorder>
-   <zorder>label_trilho1_5</zorder>
    <zorder>vel3</zorder>
-   <zorder>label_trilho4_6</zorder>
-   <zorder>label_trilho3_2</zorder>
    <zorder>label_trilho1_12</zorder>
    <zorder>pushButton</zorder>
    <zorder>label_trilho1</zorder>
    <zorder>vel5</zorder>
-   <zorder>label_RC_0</zorder>
    <zorder>vel2</zorder>
    <zorder>label_trilho3_6</zorder>
-   <zorder>label_trilho1_3</zorder>
    <zorder>vel4</zorder>
-   <zorder>label_trilho1_4</zorder>
    <zorder>label_trilho1_6</zorder>
-   <zorder>label_trilho3_5</zorder>
-   <zorder>label_RC_2</zorder>
-   <zorder>label_RC_3</zorder>
    <zorder>label_trem5</zorder>
    <zorder>label_trem3</zorder>
    <zorder>label_trem4</zorder>
    <zorder>label_trem1</zorder>
    <zorder>label_trem2</zorder>
+   <zorder>label</zorder>
+   <zorder>label_2</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_4</zorder>
+   <zorder>label_5</zorder>
+   <zorder>label_6</zorder>
+   <zorder>label_7</zorder>
+   <zorder>label_8</zorder>
+   <zorder>label_9</zorder>
+   <zorder>label_10</zorder>
+   <zorder>label_11</zorder>
+   <zorder>label_12</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>724</width>
+     <width>726</width>
      <height>22</height>
     </rect>
    </property>
