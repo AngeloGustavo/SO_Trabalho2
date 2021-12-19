@@ -32,6 +32,10 @@ private:
    int ID;          //ID do trem
    int velocidade;  //Velocidade. É o tempo de dormir em milisegundos entre a mudança de posição do trem
    //+std::vector <int> &estados;
+   bool test1;
+   bool test2;
+   bool parado;
+
 };
 
 #endif // TREM_H
