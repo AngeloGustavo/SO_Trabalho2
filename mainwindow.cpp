@@ -50,6 +50,8 @@ void MainWindow::updateInterface(int id, int x, int y){
     ui->label_10->setText(QString::number(trem3->area_atual));
     ui->label_11->setText(QString::number(trem4->area_atual));
     ui->label_12->setText(QString::number(trem5->area_atual));
+
+    ui->label_17->setText(QString::number(trem5->igeral));
     switch(id){
     case 1: //Atualiza a posição do objeto da tela (quadrado) que representa o trem1
         ui->label_trem1->setGeometry(x,y,21,17);

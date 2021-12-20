@@ -19,7 +19,7 @@ public:
     Trem(int ID, int x, int y);  //construtor
     void run();         //função a ser executada pela thread
     void setVelocidade(int velocidade);
-    int iarea1,iarea2, iarea3,iconjunto1, iconjunto2;
+    int iarea1,iarea2, iarea3,iconjunto1, iconjunto2, igeral;
     int area_atual;
 
 //Cria um sinal
@@ -37,8 +37,9 @@ private:
    bool test1;
    bool test2;
    bool test3;
+   bool test4;
+   bool test5;
    bool parado;
-   bool liberado;
 
 };
 
