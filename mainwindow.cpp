@@ -42,6 +42,8 @@ void MainWindow::updateInterface(int id, int x, int y){
     ui->label_4->setText(QString::number(trem1->iarea1));
     ui->label_5->setText(QString::number(trem1->iarea2));
     ui->label_6->setText(QString::number(trem1->iconjunto1));
+    ui->label_13->setText(QString::number(trem1->iarea3));
+    ui->label_16->setText(QString::number(trem1->iconjunto2));
 
     ui->label_8->setText(QString::number(trem1->area_atual));
     ui->label_9->setText(QString::number(trem2->area_atual));
