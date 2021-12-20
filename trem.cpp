@@ -1,7 +1,6 @@
 #include "trem.h"
 #include <QtCore>
 #include <QSemaphore>
-#include <iostream>
 
 #define THINKING 0
 #define HUNGRY 1
@@ -68,35 +67,25 @@ void Trem::run(){
                                 if(test5){
                                     parado = false;
                                 }else{
-                                    if(geral.available() < 4)
-                                        geral.release(1);
-                                    if(area1.available() < 2)
-                                        area1.release(1);
-                                    if(conjunto1.available() < 3)
-                                        conjunto1.release(1);
-                                    if(conjunto2.available() < 3)
-                                        conjunto2.release(1);
+                                    geral.release(1);
+                                    area1.release(1);
+                                    conjunto1.release(1);
+                                    conjunto2.release(1);
                                     parado = true;
                                 }
                             }else{
-                                if(geral.available() < 4)
-                                    geral.release(1);
-                                if(conjunto2.available() < 3)
-                                    conjunto2.release(1);
-                                if(conjunto1.available() < 3)
-                                    conjunto1.release(1);
+                                geral.release(1);
+                                conjunto2.release(1);
+                                conjunto1.release(1);
                                 parado = true;
                             }
                         }else{
-                            if(geral.available() < 4)
-                                geral.release(1);
-                            if(conjunto1.available() < 3)
-                                conjunto1.release(1);
+                            geral.release(1);
+                            conjunto1.release(1);
                             parado = true;
                         }
                     }else{
-                        if(geral.available() < 4)
-                            geral.release(1);
+                        geral.release(1);
                         parado = true;
                     }
                 }else
@@ -115,8 +104,7 @@ void Trem::run(){
                         area_atual=2;
                         parado = false;
                     }else{
-                        if(area2.available() < 2)
-                            area2.release(1);
+                        area2.release(1);
                         parado = true;
                     }
                 }else
@@ -130,24 +118,19 @@ void Trem::run(){
                 regiao[2].unlock();
 
                 regiaoCritica.lock();
-                if(area1.available() < 2)
-                    area1.release(1);
+                area1.release(1);
                 regiaoCritica.unlock();
             }
             else if(x == x_init && y == y_init+120){//Saindo da ultima região (1)
                 regiao[1].unlock();
 
                 regiaoCritica.lock();
-                if(geral.available() < 4)
-                    geral.release(1);
-                if(area2.available() < 2)
-                    area2.release(1);
-                if(conjunto2.available() < 3)
-                    conjunto2.release(1);
-                if(conjunto1.available() < 3)
-                    conjunto1.release(1);
-                regiaoCritica.unlock();            }
-
+                geral.release(1);
+                area2.release(1);
+                conjunto2.release(1);
+                conjunto1.release(1);
+                regiaoCritica.unlock();
+            }
             break;
         case 2: //Trem 2
             if(x == x_init + 220 && y == y_init + 120){//Entrando na região 4
@@ -164,24 +147,18 @@ void Trem::run(){
                                 area_atual = 4;
                                 parado = false;
                             }else{
-                                if(geral.available() < 4)
-                                    geral.release(1);
-                                if(area3.available() < 2)
-                                    area3.release(1);
-                                if(conjunto2.available() < 3)
-                                    conjunto2.release(1);
+                                geral.release(1);
+                                area3.release(1);
+                                conjunto2.release(1);
                                 parado = true;
                             }
                         }else{
-                            if(geral.available() < 4)
-                                geral.release(1);
-                            if(conjunto2.available() < 3)
-                                conjunto2.release(1);
+                            geral.release(1);
+                            conjunto2.release(1);
                             parado = true;
                         }
                     }else{
-                        if(geral.available() < 4)
-                            geral.release(1);
+                        geral.release(1);
                         parado = true;
                     }
                 }else
@@ -201,15 +178,12 @@ void Trem::run(){
                             regiao[4].unlock();
                             parado = false;
                         }else{
-                            if(area1.available() < 2)
-                                area1.release(1);
-                            if(conjunto1.available() < 3)
-                                conjunto1.release(1);
+                            area1.release(1);
+                            conjunto1.release(1);
                             parado = true;
                         }
                     }else{
-                        if(conjunto1.available() < 3)
-                            conjunto1.release(1);
+                        conjunto1.release(1);
                         parado = true;
                     }
                 }else
@@ -223,27 +197,22 @@ void Trem::run(){
                 regiao[3].unlock();
 
                 regiaoCritica.lock();
-                if(area3.available() < 2)
-                    area3.release(1);
+                area3.release(1);
                 regiaoCritica.unlock();
             }
             else if(x == x_init && y == y_init + 10){//Saindo da ultima região (0)
                 regiao[0].unlock();
 
                 regiaoCritica.lock();
-                if(geral.available() < 4)
-                    geral.release(1);
-                if(area1.available() < 2)
-                    area1.release(1);
-                if(conjunto1.available() < 3)
-                    conjunto1.release(1);
-                if(conjunto2.available() < 3)
-                    conjunto2.release(1);
+                geral.release(1);
+                area1.release(1);
+                conjunto1.release(1);
+                conjunto2.release(1);
                 regiaoCritica.unlock();
             }
             break;
         case 3: //Trem 3
-            if(x == x_init+110 && y == y_init){//Entrando regiao 1
+            if(x == x_init+100 && y == y_init){//Entrando regiao 1
                 regiaoCritica.lock();//Trava
 
                 test1 = geral.tryAcquire(1);
@@ -257,24 +226,18 @@ void Trem::run(){
                                 area_atual=1;
                                 parado = false;
                             }else{
-                                if(geral.available() < 4)
-                                    geral.release(1);
-                                if(area2.available() < 2)
-                                    area2.release(1);
-                                if(conjunto1.available() < 3)
-                                    conjunto1.release(1);
+                                geral.release(1);
+                                area2.release(1);
+                                conjunto1.release(1);
                                 parado = true;
                             }
                         }else{
-                            if(geral.available() < 4)
-                                geral.release(1);
-                            if(conjunto1.available() < 3)
-                                conjunto1.release(1);
+                            geral.release(1);
+                            conjunto1.release(1);
                             parado = true;
                         }
                     }else{
-                        if(geral.available() < 4)
-                            geral.release(1);
+                        geral.release(1);
                         parado = true;
                     }
                 }else
@@ -282,7 +245,7 @@ void Trem::run(){
 
                 regiaoCritica.unlock();//Trava
             }
-            else if(x == x_init+220 && y == y_init ){//Entrando na região 5
+            else if(x == x_init+210 && y == y_init ){//Entrando na região 5
                 regiao[5].lock();
                 area_atual=5;
                 regiao[1].unlock();
@@ -290,54 +253,44 @@ void Trem::run(){
                 regiao[5].unlock();
 
                 regiaoCritica.lock();
-                if(geral.available() < 4)
-                    geral.release(1);
-                if(area2.available() < 2)
-                    area2.release(1);
-                if(conjunto1.available() < 3)
-                    conjunto1.release(1);
+                geral.release(1);
+                area2.release(1);
+                conjunto1.release(1);
                 regiaoCritica.unlock();
             }break;
 
         case 4: //Trem 4
-            if(x == x_init && y == y_init+120){//Entrando na região 5
+            if(x == x_init+10 && y == y_init+120){//Entrando na região 5
                 regiaoCritica.lock();//Trava
 
                 test1 = geral.tryAcquire(1);
                 if(test1){
-                    test1 = conjunto1.tryAcquire(1);
-                    if(test1){
-                        test2 = area2.tryAcquire(1);
-                        if(test2){
-                            test3 = regiao[5].try_lock();
-                            if(test3){
+                    test2 = conjunto1.tryAcquire(1);
+                    if(test2){
+                        test3 = area2.tryAcquire(1);
+                        if(test3){
+                            test4 = regiao[5].try_lock();
+                            if(test4){
                                 area_atual=5;
                                 parado = false;
                             }else{
-                                if(geral.available() < 4)
-                                    geral.release(1);
-                                if(area2.available() < 2)
-                                    area2.release(1);
-                                if(conjunto1.available() < 3)
-                                    conjunto1.release(1);
+                                geral.release(1);
+                                area2.release(1);
+                                conjunto1.release(1);
                                 parado = true;
                             }
                         }else{
-                            if(geral.available() < 4)
-                                geral.release(1);
-                            if(conjunto1.available() < 3)
-                                conjunto1.release(1);
+                            geral.release(1);
+                            conjunto1.release(1);
                             parado = true;
                         }
                     }else{
-                        if(geral.available() < 4)
-                            geral.release(1);
+                        geral.release(1);
                         parado = true;
                     }
                 }else
                     parado = true;
 
-                std::cout<<parado<<endl;
                 regiaoCritica.unlock();//Trava
             }
             else if(x == x_init && y == y_init + 10){//Entrando na região 2
@@ -355,20 +308,19 @@ void Trem::run(){
                         }else{
                             if(conjunto2.available() < 2)
                                 conjunto2.release(1);
-                            if(area1.available() < 2)
-                                area1.release(1);
+                            area1.release(1);
                             parado = true;
                         }
                     }else{
-                        if(conjunto2.available() < 2)
-                            conjunto2.release(1);
+                        conjunto2.release(1);
                         parado = true;
                     }
                 }else
                     parado = true;
+
                 regiaoCritica.unlock();//Trava
             }
-            else if(x == x_init+110 && y == y_init){//Entrando região 3
+            else if(x == x_init+100 && y == y_init){//Entrando região 3
                 regiaoCritica.lock();//Trava
 
                 test1 = area3.tryAcquire(1);
@@ -377,44 +329,37 @@ void Trem::run(){
                     if(test2){
                         area_atual=3;
                         regiao[2].unlock();
-                        if(area2.available() < 2)
-                            area2.release(1);
+                        area2.release(1);
                         parado = false;
                     }else{
-                        if(area3.available() < 2)
-                            area3.release(1);
+                        area3.release(1);
                         parado = true;
                     }
                 }else
                     parado = true;
 
                 regiaoCritica.unlock();//Trava
-            }else if(x == x_init +220 && y == y_init +10){//Entrando na regiao 6
+            }else if(x == x_init +210 && y == y_init){//Entrando na regiao 6
                 regiao[6].lock();
                 area_atual=6;
                 regiao[3].unlock();
 
                 regiaoCritica.lock();
-                if(area1.available() < 2)
-                    area1.release(1);
-                if(conjunto1.available() < 3)
-                    conjunto1.release(1);
+                area1.release(1);
+                conjunto1.release(1);
                 regiaoCritica.unlock();
             }else if(x == x_init +220 && y == y_init +120){//Saindo da ultima regiao (6)
                 regiao[6].unlock();
 
                 regiaoCritica.lock();
-                if(geral.available() < 4)
-                    geral.release(1);
-                if(area3.available() < 2)
-                    area3.release(1);
-                if(conjunto2.available() < 3)
-                    conjunto2.release(1);
+                geral.release(1);
+                area3.release(1);
+                conjunto2.release(1);
                 regiaoCritica.unlock();
             }break;
 
         case 5: //Trem 5
-            if(x == x_init && y == y_init+120){//Entrando na região 6
+            if(x == x_init+10 && y == y_init+120){//Entrando na região 6
                 regiaoCritica.lock();//Trava
 
                 test1 = geral.tryAcquire(1);
@@ -428,24 +373,18 @@ void Trem::run(){
                                 area_atual=6;
                                 parado = false;
                             }else{
-                                if(geral.available() < 4)
-                                    geral.release(1);
-                                if(area3.available() < 2)
-                                    area3.release(1);
-                                if(conjunto2.available() < 3)
-                                    conjunto2.release(1);
+                                geral.release(1);
+                                area3.release(1);
+                                conjunto2.release(1);
                                 parado = true;
                             }
                         }else{
-                            if(geral.available() < 4)
-                                geral.release(1);
-                            if(conjunto2.available() < 3)
-                                conjunto2.release(1);
+                            geral.release(1);
+                            conjunto2.release(1);
                             parado = true;
                         }
                     }else{
-                        if(geral.available() < 4)
-                            geral.release(1);
+                        geral.release(1);
                         parado = true;
                     }
                 }else
@@ -461,12 +400,9 @@ void Trem::run(){
                 regiao[4].unlock();
 
                 regiaoCritica.lock();
-                if(geral.available() < 4)
-                    geral.release(1);
-                if(area3.available() < 2)
-                    area3.release(1);
-                if(conjunto2.available() < 3)
-                    conjunto2.release(1);
+                geral.release(1);
+                area3.release(1);
+                conjunto2.release(1);
                 regiaoCritica.unlock();
             }break;
         default:

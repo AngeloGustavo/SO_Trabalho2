@@ -5,7 +5,7 @@
 #include <QMutex>
 #include <vector>
 #include <QSemaphore>
-
+using namespace  std;
 /*
  * Classe Trem herda QThread
  * Classe Trem passa a ser uma thread.
@@ -40,7 +40,6 @@ private:
    bool test4;
    bool test5;
    bool parado;
-
 };
 
 #endif // TREM_H
